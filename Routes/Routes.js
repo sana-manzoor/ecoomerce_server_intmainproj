@@ -45,10 +45,4 @@ router.get('/category/:id',productcontroller.getcategory)
  router.post('/addorder',orderController.addOrders)
 
 
-
-
-
-
-
-
 module.exports=router

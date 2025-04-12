@@ -9,7 +9,7 @@ exports.addtoCart=async(req,res)=>{
         }
         else{
             const newItem=new carts({pid,title,price,category,description,product_image,quantity:"1",total:"",uid})
-            newItem.save()
+            await newItem.save()
             res.status(201).json(newItem)
         }
     }
@@ -85,6 +85,9 @@ exports.deletecart= async (req, res) => {
         res.status(401).json(err)
     }
 }
+
+
+
 
 
 
